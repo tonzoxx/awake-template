@@ -45,31 +45,14 @@ export default {
 
     // Disqus
     disqus: {
-        on: true,
+        on: false,
         loadingStrategy: 'button', // Options: onload, lazy, button
         siteShortName: 'blog-danielkelly-io' // 'blog-danielkelly-io'
     },
 
-    // Newsletter Subscribe
-    newsletter: {
-        on: true,
-        heading: 'Subscribe to Our Newsletter',
-        btnText: 'Subscribe',
-        // Can be the form action on a mail chimp form, a hubspot form,
-        // or any other url you want to post the form data to
-        mailchimp: {
-            on: true,
-            formAction: 'https://danielkelly.us3.list-manage.com/subscribe/post?u=d3c2e762b66a2353d0bc29bf3&amp;id=2abeaa06e0'
-        },
-        custom: {
-            on: false,
-            formAction: ''
-        }
-    },
-
     // Categories
     categories: {
-        on: true,
+        on: false,
         perPage: 6,
         imageDimensions: null, // See card.imageDimensions (can be unique for categories if set here)
         theme: null // See card.theme (can be unique for categories if set here)
@@ -77,7 +60,7 @@ export default {
 
     // Posts
     posts: {
-        on: true,
+        on: false,
         theme: null, // See card.theme (can be unique for posts if set here)
         imageDimensions: null, // See card.imageDimensions (can be unique for posts if set here)
         displayAuthor: true,

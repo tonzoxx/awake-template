@@ -15,7 +15,6 @@
             class="logo"
           />
         </nuxt-link>
-        <hamburger-button @click="active = !active" />
       </div>
 
       <div
@@ -49,10 +48,9 @@
   </nav>
 </template>
 <script>
-import HamburgerButton from '~/components/HamburgerButton'
 export default {
   name: 'SiteNav',
-  components: { HamburgerButton },
+
   data() {
     return {
       active: false
@@ -63,12 +61,6 @@ export default {
 <style lang="scss" scoped>
 .navbar-item img {
   max-height: 2rem;
-}
-.site-search-wrapper {
-  transform: translateX(5px);
-  @media (max-width: 1023px) {
-    display: none;
-  }
 }
 .navbar-burger {
   height: auto;

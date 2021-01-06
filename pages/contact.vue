@@ -1,71 +1,68 @@
 <template>
   <div id="contact-page" class="page-wrapper contact-page content-page">
-    <site-hero
-      title="Contact Us"
-      subtitle="Example Contact Page"
-      image="/uploads/contact-hero.jpg"
-    ></site-hero>
-    <main-section theme="sidebar-right">
+    <main-section theme="one-column">
       <template v-slot:default>
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <article class="tile is-child box">
-              <p class="title">
-                Hello!
-              </p>
-              <p class="subtitle">
-                What can I do for you?
-              </p>
-              <figure class="image is-1by1 ">
-                <opti-image
-                  :src="require('~/assets/uploads/contact-person.jpg').src"
-                  :srcset="
-                    require('~/assets/uploads/contact-person.jpg').srcSet
-                  "
-                />
-              </figure>
-              <br />
-              <div class="content">
-                <p>
-                  <strong>
-                    Edit this page in<code>/pages/contact.vue</code>to fit your
-                    needs.
-                  </strong>
-                </p>
-                <p>
-                  This form doesn't actually work but would be easy enough to
-                  slap an action on to have it post wherever you'd like. Or put
-                  the netlify attribute on it and have netlify handle all your
-                  form submissions...
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="tile is-parent is-8">
-            <article class="tile is-child box">
-              <contact-form />
-            </article>
-          </div>
+        <div class="button-wrap">
+          <nuxt-link to="/posts" class="round-centered-btn linkedin">
+            LinkedIn
+          </nuxt-link>
+          <nuxt-link to="/posts" class="round-centered-btn twitter">
+            Twitter
+          </nuxt-link>
         </div>
-      </template>
-      <template v-slot:sidebar>
-        <h3 class="subtitle is-4">
-          Latest Posts
-        </h3>
-        <!-- Latest Posts -->
-        <posts-grid :per-row="1" :number="2" />
+        <article class="tile is-child box">
+          <p class="title">
+            A Little About Me...
+          </p>
+          <figure class="image is-2by1 ">
+            <opti-image
+              :src="require('~/assets/uploads/contact-img.png').src"
+              :srcset="require('~/assets/uploads/contact-img.png').srcSet"
+            />
+          </figure>
+          <br />
+          <div class="content">
+            <p>
+              <strong>
+                Edit this page in<code>/pages/contact.vue</code>to fit your
+                needs.
+              </strong>
+            </p>
+            <p>
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.”
+            </p>
+            <p>
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.”
+            </p>
+          </div>
+        </article>
       </template>
     </main-section>
   </div>
 </template>
 <script>
-import ContactForm from '~/components/ContactForm'
 export default {
   head() {
     return {
       title: `Contact | ${this.$siteConfig.siteName}`
     }
-  },
-  components: { ContactForm }
+  }
 }
 </script>
+<style>
+.contact-page .container {
+  max-width: 560px;
+}
+</style>

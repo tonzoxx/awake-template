@@ -29,15 +29,6 @@
             >
               {{ title }}
             </h3>
-            <h4
-              :class="{
-                subtitle: true,
-                'is-6': true,
-                'empty-content-placeholder': !$slots.default
-              }"
-            >
-              <slot></slot>
-            </h4>
           </nuxt-link>
         </div>
       </div>

@@ -19,8 +19,8 @@ export default {
         id: process.env.GOOGLE_ANALYTICS_ID
     },
     mainMenu: [{
-            name: 'About',
-            link: '/about'
+            name: 'Posts',
+            link: '/posts'
         },
         {
             name: 'Contact',

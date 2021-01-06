@@ -1,16 +1,5 @@
 <template>
   <div id="post-page" class="page-wrapper post-page">
-    <site-hero :title="title" :subtitle="subtitle" :image="featureImage">
-      <span
-        v-if="author && $siteConfig.posts.displayAuthor"
-        class="author-wrapper"
-      >
-        <strong>Author:</strong> {{ author }}
-      </span>
-      <span v-if="date" class="date-wrapper">
-        <strong>Published on:</strong> {{ date }}
-      </span>
-    </site-hero>
     <main-section :one-column-constrained="true">
       <template v-slot:default>
         <div class="post-wrapper">
@@ -67,5 +56,8 @@ export default {
 <style scoped lang="scss">
 .edit-post {
   margin-bottom: 20px;
+}
+.post-page .container {
+  max-width: 560px;
 }
 </style>

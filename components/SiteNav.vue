@@ -99,11 +99,13 @@ export default {
   color: #3b80f0;
 }
 @media screen and (max-width: 1023px) {
-  .header-block {
-    width: calc(100% - 3.25rem);
-  }
   .navbar-menu-custom {
     flex-grow: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header-block {
+    width: calc(100% - 3.25rem);
   }
 }
 </style>

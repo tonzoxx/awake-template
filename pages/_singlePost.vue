@@ -1,6 +1,6 @@
 <template>
   <div id="post-page" class="page-wrapper post-page">
-    <main-section :one-column-constrained="true">
+    <main-section theme="one-column">
       <template v-slot:default>
         <div class="post-wrapper">
           <markdown :markdown="$store.state.content" />
@@ -53,11 +53,32 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss">
+<style lang="scss">
+.container {
+  max-width: 560px;
+}
 .edit-post {
   margin-bottom: 20px;
 }
 .post-page .container {
   max-width: 560px;
+}
+.post-page .content.content {
+  border-radius: 11px 11px 0px 0px;
+  background-color: #fff;
+  padding: 1.25rem;
+  border-bottom: 1px #3b80f0 solid;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+@media screen and (min-width: 1408px) {
+  .post-page .container {
+    max-width: 560px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .post-page .container {
+    max-width: 560px;
+  }
 }
 </style>

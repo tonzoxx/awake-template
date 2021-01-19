@@ -3,12 +3,18 @@
     <main-section theme="one-column">
       <template v-slot:default>
         <div class="button-wrap">
-          <nuxt-link to="/posts" class="round-centered-btn linkedin">
+          <a
+            href="https://www.linkedin.com/in/emily-miller-06131a39"
+            class="round-centered-btn linkedin"
+          >
             LinkedIn
-          </nuxt-link>
-          <nuxt-link to="/posts" class="round-centered-btn twitter">
-            Twitter
-          </nuxt-link>
+          </a>
+          <a
+            href="https://twitter.com/emrachmill"
+            class="round-centered-btn twitter"
+          >
+            LinkedIn
+          </a>
         </div>
         <article class="tile is-child box">
           <p class="title">

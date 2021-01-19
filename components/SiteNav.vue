@@ -101,7 +101,7 @@ export default {
 @media screen and (max-width: 1023px) {
   .header-block {
     width: 420px;
-}
+  }
   .navbar-menu-custom {
     flex-grow: 0.3;
   }

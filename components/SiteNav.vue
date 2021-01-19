@@ -103,7 +103,7 @@ export default {
     width: 420px;
   }
   .navbar-menu-custom {
-    flex-grow: 0.3;
+    flex-grow: 0.4;
   }
 }
 </style>

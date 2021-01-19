@@ -19,15 +19,15 @@
 
       <div
         :class="{
-          'navbar-menu': true,
+          'navbar-menu-custom': true,
           'is-active': active
         }"
       >
-        <ul class="navbar-end">
+        <ul class="navbar-end-custom">
           <li
             v-for="item in $siteConfig.mainMenu"
             :key="item.link"
-            class="navbar-item"
+            class="navbar-item-custom"
             @click="active = false"
           >
             <component
@@ -38,9 +38,6 @@
             >
               {{ item.name }}
             </component>
-          </li>
-          <li class="navbar-item site-search-wrapper">
-            <site-search />
           </li>
         </ul>
       </div>
@@ -79,5 +76,31 @@ export default {
 .navbar-brand a:hover {
   display: block;
   color: #3b80f0;
+}
+
+.navbar-menu-custom {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+.navbar-end-custom {
+  display: flex;
+}
+.navbar-item-custom {
+  margin: 0 10px;
+  padding: 15% 0;
+  align-items: center;
+}
+.navbar-item-custom a {
+  color: #4a4a4a;
+}
+.navbar-item-custom a:hover {
+  color: #3b80f0;
+}
+@media screen and (max-width: 1023px) {
+  .navbar-menu-custom {
+    flex-grow: 0.3;
+  }
 }
 </style>

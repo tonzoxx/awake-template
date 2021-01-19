@@ -31,4 +31,9 @@ export default {
   margin: 0 0 25px 0;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .header-block {
+    width: calc(100% - 3.25rem);
+  }
+}
 </style>

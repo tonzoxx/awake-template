@@ -103,5 +103,4 @@ export default {
     flex-grow: 0;
   }
 }
-
 </style>
